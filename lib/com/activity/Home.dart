@@ -65,7 +65,7 @@ class _HomeActivity extends State<HomeActivity>{
         _getImageAsstes("images/types.png"),
       ],
       [
-        _getImageAsstes("images/aboutuss.png"),
+        _getImageAsstes("images/aboutus.png"),
         _getImageAsstes("images/aboutuss.png"),
       ]
     ];
@@ -89,9 +89,7 @@ class _HomeActivity extends State<HomeActivity>{
     initData();
 
     return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("首页"),
-      ),
+
       body: _bodys[_tabIndex],
       bottomNavigationBar: new BottomNavigationBar(items: [
         new BottomNavigationBarItem(icon: getTabIcon(0) , title: getTabTitle(0)),
