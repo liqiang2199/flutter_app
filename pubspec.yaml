@@ -47,6 +47,13 @@ flutter:
      - images/main_brand.png
      - images/main_discount.png
      - images/main_time_kill.png
+     - images/ic_luntai.png
+     - images/icon_right.png
+     - images/daifahuo.png
+     - images/daifukuan.png
+     - images/daipingjia.png
+     - images/daishouhuo.png
+     - images/wdedingdan.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
