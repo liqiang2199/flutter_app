@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/com/activity/_LoginActivity.dart';
 import 'package:flutter_app/com/activity/StartActivity.dart';
 import 'package:flutter_app/com/activity/Home.dart';
+import 'package:flutter_app/com/activity/ShopDetailActivity.dart';
 
 //程序入口
 void main() => runApp(
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
       routes: <String,WidgetBuilder>{
         "/login":(BuildContext context) => new LoginFulActivity(),
         "/home":(BuildContext context) => new HomeActivity(),
+        "/shopDetail":(BuildContext context) => new ShopDetailActivity(),
       },
     );
   }

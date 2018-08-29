@@ -55,7 +55,7 @@ class _TypeFragment extends State<TypePageFragment>{
           width: window.physicalSize.width/window.devicePixelRatio - window.physicalSize.width/12,
           child: new ListView(
             shrinkWrap: true,
-            children: _shopList(),
+            children: _shopList(context),
           ),
         ),
 
@@ -64,10 +64,10 @@ class _TypeFragment extends State<TypePageFragment>{
     );
   }
 
-  List<Widget> _shopList(){
+  List<Widget> _shopList(BuildContext context){
     List<Widget> shops = new List();
     for (int i = 0;i<15;i++){
-      shops.add(ViewUtils().shopListView(0.0));
+      shops.add(ViewUtils().shopListView(context,0.0));
     }
     //print("    屏幕宽度 ${window.physicalSize.width/2.6 - window.physicalSize.width/12}  和高度 ${window.physicalSize.height}    ");
     //print("    屏幕宽度 ${window.physicalSize.width/2.625 - window.physicalSize.width/12}  和像素比 ${window.devicePixelRatio}    ");

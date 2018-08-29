@@ -135,7 +135,7 @@ class _HomeFragment extends State<HomePageFragment>{
                 children: _titleFind(2),
               ),
               //所有商品列表
-              _shopList(),
+              _shopList(context),
 
             ],
           )
@@ -295,7 +295,7 @@ class _HomeFragment extends State<HomePageFragment>{
   /**
    * 所有商品 列表
    */
-  Widget _shopList(){
+  Widget _shopList(BuildContext context){
     return new Column(
       children: <Widget>[
         _title("全部商品"),
@@ -303,7 +303,7 @@ class _HomeFragment extends State<HomePageFragment>{
 //          children: _allShopList(),
 //        ),
         new Column(
-          children: _allShopList(),
+          children: _allShopList(context),
         ),
 
       ],
@@ -311,10 +311,10 @@ class _HomeFragment extends State<HomePageFragment>{
 
   }
 
-  List<Widget> _allShopList(){
+  List<Widget> _allShopList(BuildContext context){
     List<Widget> allList = new List();
     for(int i = 0;i<10;i++){
-      allList.add(ViewUtils().shopListView(window.physicalSize.width));
+      allList.add(ViewUtils().shopListView(context,window.physicalSize.width));
     }
     return allList;
   }

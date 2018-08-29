@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flutter/services.dart';
+import 'dart:io';
 
 class LoginFulActivity extends StatefulWidget{
   @override
@@ -116,7 +117,22 @@ class LoginActivity extends State<LoginFulActivity>{
   void _loginBtn(){
     //跳转首页
     //loadHttpLogin();
+    //_networkLoading();
     Navigator.of(context).pushNamed('/home');
+  }
+  void _networkLoading() {
+    // 将给定标头的HTTP GET请求发送到给定的URL，并注册回调，参数为HTTP响应
+    http.get('https://domokit.github.io/examples/stocks/data/stock_data_2.json').then((http.Response response) {
+      // 响应的主体作为字符串返回
+      String netdata = response.body;
+//      // JsonDecoder类解析JSON字符串并构建相应的对象
+//      JsonDecoder decoder = new JsonDecoder();
+//      // 将给定的JSON字符串输入转换为其对应的对象
+//      List<List<String>> json = decoder.convert(netdata);
+//      // 输出给定的JSON数据
+//      print(json[0][1]);
+    print("  $netdata ");
+    });
   }
 
   //登陆接口请求
@@ -131,7 +147,8 @@ class LoginActivity extends State<LoginFulActivity>{
         //请求参数
         body: {"loginAccount":"18081268217",
                 "loginPsd":"123456",
-                "type":"1","code":"",}
+                "type":"1","code":"",},
+        encoding: Encoding.getByName("utf-8"),
     );
 
     //请求
