@@ -3,6 +3,7 @@ import 'package:flutter_app/com/activity/_LoginActivity.dart';
 import 'package:flutter_app/com/activity/StartActivity.dart';
 import 'package:flutter_app/com/activity/Home.dart';
 import 'package:flutter_app/com/activity/ShopDetailActivity.dart';
+import 'package:flutter_app/com/activity/textactivity/TextActivityDartMain.dart';
 
 //程序入口
 void main() => runApp(
@@ -43,6 +44,8 @@ class MyApp extends StatelessWidget {
         "/login":(BuildContext context) => new LoginFulActivity(),
         "/home":(BuildContext context) => new HomeActivity(),
         "/shopDetail":(BuildContext context) => new ShopDetailActivity(),
+        //flutter 访问原生界面 和传递数据到原生界面
+        "/textPlugin":(BuildContext context) => new TextActivityDartMain(),
       },
     );
   }

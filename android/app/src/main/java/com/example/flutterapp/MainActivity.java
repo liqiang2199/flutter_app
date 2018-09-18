@@ -9,5 +9,7 @@ public class MainActivity extends FlutterActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     GeneratedPluginRegistrant.registerWith(this);
+    //一定要实现注册
+    TextVisiableActivity.registerWith(this.registrarFor(TextVisiableActivity.PLUGIN_TEXT));
   }
 }

@@ -11,7 +11,9 @@ class ViewUtils{
     return new GestureDetector(
       onTap: (){
         //跳转 商品详情
-        Navigator.of(context).pushNamed('/shopDetail');
+        //Navigator.of(context).pushNamed('/shopDetail');
+        //跳转测试 原生交互 Dart界面
+        Navigator.of(context).pushNamed('/textPlugin');
         //print("shopListView  商品详情点击 ");
       },
       child: new Container(
