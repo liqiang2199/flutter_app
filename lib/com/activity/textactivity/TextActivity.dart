@@ -39,5 +39,6 @@ class TextPlugin{
       callback(result);
     }
   }
+  
 
 }
